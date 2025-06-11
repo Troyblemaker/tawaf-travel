@@ -7,23 +7,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Top section */}
         <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-8">
-          <div className="mb-6 md:mb-0">
-            <Image src="/logo-upscaled.png" alt="Tawaf Travel Logo" width={48} height={48} />
-            <div className="mt-2 text-xs tracking-widest">TawafTravel.id</div>
-            <div className="text-sm">Sepenuh Hati, Melayani Umat</div>
+          {/* Logo and text side by side */}
+          <div className="flex items-center mb-6 md:mb-0">
+            <Image src="/logo-upscaled.png" alt="Tawaf Travel Logo" width={48} height={48} className="mr-3" />
+            <div>
+              <div className="mt-2 text-xs tracking-widest">TawafTravel.id</div>
+              <div className="text-sm">Sepenuh Hati, Melayani Umat</div>
+            </div>
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" aria-label="Facebook" className="hover:text-green-400">
-              <i className="fab fa-facebook-f text-xl"></i>
+              <Image src="/facebook.svg" alt="Facebook" width={36} height={36} />
             </a>
             <a href="#" aria-label="Instagram" className="hover:text-green-400">
-              <i className="fab fa-instagram text-xl"></i>
+              <Image src="/instagram.svg" alt="Instagram" width={36} height={36} />
             </a>
             <a href="#" aria-label="YouTube" className="hover:text-green-400">
-              <i className="fab fa-youtube text-xl"></i>
+              <Image src="/youtube.svg" alt="YouTube" width={36} height={36} />
             </a>
             <a href="#" aria-label="WhatsApp" className="hover:text-green-400">
-              <i className="fab fa-whatsapp text-xl"></i>
+              <Image src="/whatsapp.svg" alt="WhatsApp" width={36} height={36} />
             </a>
           </div>
         </div>
