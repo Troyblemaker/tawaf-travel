@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ContactModal from './ContactModal';
+import TestimonyCarousel from './TestimonyCarousel';
 
 
 
@@ -329,6 +330,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
+      <TestimonyCarousel />
       {/* Contact Modal */}
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
