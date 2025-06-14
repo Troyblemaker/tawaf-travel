@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <>
-    <nav className="bg-white border-b border-gray-300 px-4 md:px-12 py-1 fixed top- w-full z-50 shadow-md">
+    <nav className="bg-white border-b border-gray-300 px-4 md:px-12 py-1 fixed top-0 w-full z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo and Brand */}
         <div className="flex items-center space-x-3">
@@ -26,7 +26,7 @@ export default function Navbar() {
           </Link>
         </div>
         {/* Hamburger for mobile */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-gray-700 hover:text-green-700 focus:outline-none"
@@ -42,7 +42,7 @@ export default function Navbar() {
           </button>
         </div>
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           <Link href="/" className="font-semibold text-gray-800 hover:text-green-700  pb-1">
             Beranda
           </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-3 space-y-1">
+        <div className="lg:hidden mt-3 space-y-1">
           <Link href="/" className="block font-semibold text-gray-800 px-2 py-2 hover:bg-green-50 rounded">
             Beranda
           </Link>

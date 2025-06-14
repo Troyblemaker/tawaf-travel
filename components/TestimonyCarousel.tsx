@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 type Testimony = {
@@ -37,15 +37,29 @@ const testimonies: Testimony[] = [
   },
 ];
 
-const CARDS_TO_SHOW = 3;
-
 export default function TestimonyCarousel() {
   const [current, setCurrent] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3);
 
-  // Calculate the indices of the 3 cards to show
+  // Responsive: adjust cardsToShow based on window width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setCardsToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsToShow(2);
+      } else {
+        setCardsToShow(3);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const getVisibleTestimonies = () => {
     const visible: Testimony[] = [];
-    for (let i = 0; i < CARDS_TO_SHOW; i++) {
+    for (let i = 0; i < cardsToShow; i++) {
       visible.push(testimonies[(current + i) % testimonies.length]);
     }
     return visible;
@@ -61,7 +75,7 @@ export default function TestimonyCarousel() {
     );
 
   return (
-    <section id="testimoni" className="py-16 bg-gray-50">
+    <section id="testimoni" className="py-16 bg-gray-50 w-auto">
       <div className="max-w-xl mx-auto text-center mb-8">
         <h2 className="text-3xl font-bold text-green-700 mb-2">Testimoni Jamaah</h2>
         <p className="text-gray-600">Apa kata mereka tentang Tawaf Travel?</p>
