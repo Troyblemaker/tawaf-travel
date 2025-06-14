@@ -35,7 +35,7 @@ export default function Hero() {
             Tawaf Travel adalah perusahaan travel umroh yang menawarkan layanan ibadah sesuai Sunnah dengan pelayanan yang maksimal dan bimbingan spiritual dari para asatidzah terpercaya. Fokus kami adalah menghadirkan perjalanan ibadah yang bermakna, tenang, dan bernilai akhirat tinggi.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#paket" className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded shadow transition text-center">Lihat Paket</a>
+            <a href="#paket-umrah" className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3 rounded shadow transition text-center">Lihat Paket</a>
             <button onClick={() => setContactOpen(true)} className="bg-white hover:bg-gray-100 text-green-700 font-bold px-8 py-3 rounded shadow transition">Kontak Kami</button>
           </div>
         </div>

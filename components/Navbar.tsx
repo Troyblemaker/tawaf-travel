@@ -67,7 +67,7 @@ export default function Navbar() {
           <Link href="/" className="block font-semibold text-gray-800 px-2 py-2 hover:bg-green-50 rounded">
             Beranda
           </Link>
-          <Link href="/#paket" className="block font-semibold text-gray-800 px-2 py-2 hover:bg-green-50 rounded">
+          <Link href="/#paket-umrah" className="block font-semibold text-gray-800 px-2 py-2 hover:bg-green-50 rounded">
             Paket
           </Link>
           
